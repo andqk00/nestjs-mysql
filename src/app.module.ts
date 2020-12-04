@@ -15,6 +15,13 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       password: '1qaZ2wsX',
       database: 'operator_api',
       entities: [__dirname + '/**/*.entity{.ts,.js}'],
+      migrations: [
+        'src/migrations/*.ts',
+        'dist/migrations/*{.ts,.js}'
+      ],
+      cli: {
+        'migrationsDir': 'src/migrarions'
+      },
       synchronize: true,
       acquireTimeout: 100000,
     }),
