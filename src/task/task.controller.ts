@@ -22,7 +22,12 @@ export class TaskController {
     }
 
     @Patch(':id')
-    update(@Body() task: Task) {
+    update(
+        @Param('id') taskId: number,
+        @Body('name') taskName: string,
+        @Body('description') taskDescrip: string,
+        @Body('isDone') taskDone: boolean) {
+            let task = new Task(taskId, taskName, taskDescrip, taskDone);
         return this.taskService.update(task);
     }
 
