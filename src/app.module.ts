@@ -9,11 +9,11 @@ import { TypeOrmModule } from '@nestjs/typeorm';
     TaskModule,
     TypeOrmModule.forRoot({
       type: 'mysql',
-      host: 'sandbox.cluster-cd4rrmvmhmqt.ap-southeast-1.rds.amazonaws.com',
+      host: '127.0.0.1',
       port: 3306,
-      username: 'admin',
-      password: '1qaZ2wsX',
-      database: 'operator_api',
+      username: 'root',
+      password: '@Linhhuyenvu1906',
+      database: 'nestjs_mysql',
       entities: [__dirname + '/**/*.entity{.ts,.js}'],
       migrations: [
         'src/migrations/*.ts',
